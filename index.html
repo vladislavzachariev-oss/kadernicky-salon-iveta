@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kadeřnický Salon Iveta | Jablonec nad Nisou</title>
+<meta name="description" content="Kadeřnický Salon Iveta – vlasové studio v Jablonci nad Nisou. Hodnocení 4,7 na Googlu. Objednejte se na tel. 483 710 888.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HairSalon",
+  "name": "Kadeřnický Salon Iveta",
+  "image": "",
+  "telephone": "+420483710888",
+  "email": "tauchmanovaiveta@seznam.cz",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Skřivánčí 3059/49",
+    "addressLocality": "Jablonec nad Nisou",
+    "postalCode": "466 01",
+    "addressCountry": "CZ"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "reviewCount": "21"
+  }
+}
+</script>
+<style>
+  :root {
+    --bg: #ffffff;
+    --ink: #1c1a1e;
+    --ink-soft: #55505a;
+    --header-bg: #221f26;
+    --header-ink: #f5f1ee;
+    --accent: #c98a9c;
+    --accent-dark: #a8677c;
+    --line: #eae5e2;
+    --card-bg: #faf7f6;
+    --radius: 14px;
+    --max: 960px;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    margin: 0 0 0.5em;
+    line-height: 1.2;
+  }
+
+  a { color: inherit; }
+
+  .wrap {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  header.site {
+    background: var(--header-bg);
+    color: var(--header-ink);
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  header.site .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--header-ink);
+    text-decoration: none;
+  }
+
+  .brand span {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 0.7rem;
+    color: var(--accent);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+
+  .call-btn {
+    background: var(--accent);
+    color: #221f26;
+    padding: 9px 16px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .call-btn:hover { background: var(--accent-dark); color: #fff; }
+
+  .hero {
+    background: linear-gradient(180deg, var(--header-bg) 0%, #2c2731 100%);
+    color: var(--header-ink);
+    padding: 56px 0 48px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    color: #fff;
+  }
+
+  .hero .obor {
+    color: var(--accent);
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  .hero .mesto {
+    color: #d8d2d6;
+    font-size: 1.05rem;
+    margin-bottom: 22px;
+  }
+
+  .rating {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 10px 20px;
+    border-radius: 999px;
+    font-size: 0.95rem;
+  }
+
+  .rating .stars { color: #f0c14b; letter-spacing: 2px; }
+  .rating strong { color: #fff; }
+
+  section {
+    padding: 48px 0;
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 6px;
+  }
+
+  .section-sub {
+    text-align: center;
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+    margin-bottom: 32px;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  @media (min-width: 560px) {
+    .services-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (min-width: 820px) {
+    .services-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .service-card {
+    background: var(--card-bg);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 22px 20px;
+  }
+
+  .service-card h3 {
+    font-size: 1.05rem;
+    color: var(--accent-dark);
+    margin-bottom: 6px;
+  }
+
+  .service-card p {
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  .hours-contact {
+    background: var(--card-bg);
+  }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  @media (min-width: 720px) {
+    .grid-2 { grid-template-columns: 1fr 1fr; }
+  }
+
+  .info-box {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 26px 24px;
+  }
+
+  .info-box h3 {
+    font-size: 1.1rem;
+    margin-bottom: 14px;
+    color: var(--ink);
+  }
+
+  .info-box p {
+    margin: 0 0 10px;
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+  }
+
+  .contact-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .contact-list li {
+    margin-bottom: 14px;
+  }
+
+  .contact-list a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--ink);
+    font-size: 1rem;
+  }
+
+  .contact-list a:hover { color: var(--accent-dark); }
+
+  .icon {
+    width: 22px;
+    height: 22px;
+    flex: none;
+  }
+
+  .map-link {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: var(--header-bg);
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  .map-link:hover { background: var(--accent-dark); }
+
+  footer {
+    background: var(--header-bg);
+    color: #b7b1b8;
+    text-align: center;
+    padding: 24px 0;
+    font-size: 0.8rem;
+  }
+
+  footer .attribution {
+    margin-top: 6px;
+    color: #8a848c;
+    font-size: 0.72rem;
+  }
+
+  .cta-row {
+    text-align: center;
+    margin-top: 36px;
+  }
+
+  .cta-row a {
+    display: inline-block;
+    background: var(--accent);
+    color: #221f26;
+    padding: 13px 28px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+
+  .cta-row a:hover { background: var(--accent-dark); color: #fff; }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a href="#hero" class="brand">Kadeřnický Salon Iveta<span>Vlasové studio · Jablonec nad Nisou</span></a>
+    <a class="call-btn" href="tel:+420483710888">Zavolat</a>
+  </div>
+</header>
+
+<section class="hero" id="hero">
+  <div class="wrap">
+    <div class="obor">Vlasové studio</div>
+    <h1>Kadeřnický Salon Iveta</h1>
+    <div class="mesto">Jablonec nad Nisou</div>
+    <div class="rating">
+      <span class="stars">★★★★★</span>
+      <span><strong>4,7</strong> / 5 · 21 recenzí na Googlu</span>
+    </div>
+  </div>
+</section>
+
+<section id="sluzby">
+  <div class="wrap">
+    <h2>Naše služby</h2>
+    <p class="section-sub">Péče o vlasy pro dámy, pány i děti</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Dámské a pánské střihy</h3>
+        <p>Střih na míru dle typu vlasů a přání klienta.</p>
+      </div>
+      <div class="service-card">
+        <h3>Barvení a melír</h3>
+        <p>Celobarvení, melír, tónování a odbarvování vlasů.</p>
+      </div>
+      <div class="service-card">
+        <h3>Foukaná a styling</h3>
+        <p>Vodová i suchá foukaná, úprava účesu na míru.</p>
+      </div>
+      <div class="service-card">
+        <h3>Trvalá ondulace</h3>
+        <p>Klasická i jemnější varianta trvalé podle typu vlasů.</p>
+      </div>
+      <div class="service-card">
+        <h3>Vlasová péče a regenerace</h3>
+        <p>Ošetření a regenerační kúry pro poškozené či namáhané vlasy.</p>
+      </div>
+      <div class="service-card">
+        <h3>Svatební a společenské účesy</h3>
+        <p>Slavnostní účesy na míru pro výjimečné příležitosti.</p>
+      </div>
+    </div>
+    <div class="cta-row">
+      <a href="tel:+420483710888">Objednat se telefonicky</a>
+    </div>
+  </div>
+</section>
+
+<section class="hours-contact" id="kontakt">
+  <div class="wrap">
+    <h2>Otevírací doba &amp; kontakt</h2>
+    <p class="section-sub">Aktuální termíny a otevírací dobu vám rádi sdělíme telefonicky</p>
+    <div class="grid-2">
+      <div class="info-box">
+        <h3>Otevírací doba</h3>
+        <p>Provozní dobu a volné termíny si prosím ověřte telefonicky – rádi vás objednáme na vyhovující čas.</p>
+        <a class="map-link" href="tel:+420483710888">Zjistit otevírací dobu</a>
+      </div>
+      <div class="info-box">
+        <h3>Kontaktní údaje</h3>
+        <ul class="contact-list">
+          <li>
+            <a href="tel:+420483710888">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.11 4.18 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.72c.12.9.34 1.79.65 2.63a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.45-1.21a2 2 0 0 1 2.11-.45c.84.31 1.73.53 2.63.65A2 2 0 0 1 22 16.92z"/></svg>
+              483 710 888
+            </a>
+          </li>
+          <li>
+            <a href="mailto:tauchmanovaiveta@seznam.cz">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg>
+              tauchmanovaiveta@seznam.cz
+            </a>
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Kade%C5%99nick%C3%BD%20Salon%20Iveta%2C%20Sk%C5%99iv%C3%A1n%C4%8D%C3%AD%203059%2F49%2C%20466%2001%20Jablonec%20nad%20Nisou" target="_blank" rel="noopener">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Skřivánčí 3059/49, 466 01 Jablonec nad Nisou
+            </a>
+          </li>
+        </ul>
+        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Kade%C5%99nick%C3%BD%20Salon%20Iveta%2C%20Sk%C5%99iv%C3%A1n%C4%8D%C3%AD%203059%2F49%2C%20466%2001%20Jablonec%20nad%20Nisou" target="_blank" rel="noopener">Zobrazit na mapě</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>Kadeřnický Salon Iveta — Skřivánčí 3059/49, 466 01 Jablonec nad Nisou</div>
+    <div class="attribution">Ukázka webu — Vladislav Zachariev</div>
+  </div>
+</footer>
+
+</body>
+</html>
